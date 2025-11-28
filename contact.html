@@ -1,0 +1,207 @@
+<!-- this assingment was done by prashna sapkota-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | 100SMILES Dental Care</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <h1>Contact Us</h1>
+        <p>Your trusted dental care provider in Razole</p>
+        <a href="#booking-form" class="cta-button">Book Online & Save 25%</a>
+      </header>
+
+      <nav>
+        <div class="menu-toggle">&#9776;</div>
+        <ul class="nav-links" id="menu-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="article.html">Articles</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <!-- CONTACT INFORMATION -->
+        <section>
+          <h2>Visit Us</h2>
+          <p><strong>Address:</strong> 33 Fantail Street, Razole, Queensland</p>
+          <p>
+            <strong>Phone:</strong> <a href="tel:0750005599">07 5000 5599</a>
+          </p>
+          <p><strong>Fax:</strong> 07 4567 9999</p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:admin@100smilesdentalcare.com.au">
+              admin@100smilesdentalcare.com.au
+            </a>
+          </p>
+          <img
+            src="images/clinic-room.jpg"
+            alt="Dental treatment room"
+            style="width: 100%; border-radius: 12px; margin: 1.5rem 0"
+          />
+        </section>
+
+        <!-- TRADING HOURS -->
+        <section>
+          <h2>Trading Hours</h2>
+          <ul>
+            <li><strong>Monday – Friday:</strong> 8:30am – 6:30pm</li>
+            <li><strong>Saturday – Sunday:</strong> 8:30am – 1:00pm</li>
+          </ul>
+        </section>
+
+        <!-- ANNOUNCEMENTS SECTION -->
+        <section>
+          <h2>Announcements</h2>
+          <ul>
+            <li><strong>25% discount</strong> when you book online!</li>
+            <li>
+              <strong>Free dental checkup</strong> on Saturday 5th July, from
+              9am.
+            </li>
+            <li>
+              <strong>10% off</strong> Annual Dental Check-Up package until
+              April 30.
+            </li>
+          </ul>
+        </section>
+
+        <!-- LOCATION MAP -->
+        <section class="location-section">
+          <h2>Location</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.123456789!2d144.9631!3d-37.8136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f5b2ef%3A0xabcdef1234567890!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1690000000000!5m2!1sen!2sus"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+
+        <!-- BOOKING FORM (REQUIRED FOR ASSIGNMENT 2) -->
+        <section id="booking-form">
+          <h2>Online Booking Form</h2>
+          <p>Book your appointment quickly using our online form.</p>
+          <div id="form">
+            <h2>Complete the form below to begin your free trial.</h2>
+            <form
+              class="form-grid"
+              name="myForm"
+              action="../Form/submitted.html"
+              onsubmit="return validateForm()"
+            >
+              <!-- Start Form -->
+              <fieldset>
+                <legend>Customer Information</legend>
+                <label for="fName">First Name:</label>
+                <input type="text" name="fName" id="fName" />
+                <label for="lName">Last Name:</label>
+                <input type="text" name="lName" id="lName" />
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" />
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone" />
+              </fieldset>
+              <fieldset>
+                <legend>Additional Information</legend>
+                <p>I would like more information about:</p>
+                <label for="grpfit"
+                  ><input
+                    type="checkbox"
+                    name="interest"
+                    id="grpfit"
+                    value="Doctor Appointment"
+                  />Appointments</label
+                >
+                <label for="prtrain"
+                  ><input
+                    type="checkbox"
+                    name="interest"
+                    id="prtrain"
+                    value="Dental Surgery"
+                  />Surgery</label
+                >
+                <label for="nutr"
+                  ><input
+                    type="checkbox"
+                    name="interest"
+                    id="nutr"
+                    value="Report"
+                  />Report</label
+                >
+              </fieldset>
+              <fieldset>
+                <legend>Referral Source</legend>
+                <label for="reference">How did you find us?</label>
+                <select name="reference" id="reference">
+                  <option value="ad">Advertisement</option>
+                  <option value="friend">Friend</option>
+                  <option value="google">Google</option>
+                  <option value="social">Social Media</option>
+                  <option value="other">Other</option>
+                </select>
+                <label for="questions"> Questions?</label>
+                <textarea
+                  id="questions"
+                  name="questions"
+                  rows="5"
+                  cols="35"
+                ></textarea>
+              </fieldset>
+              <input type="submit" id="submit" value="Submit" class="btn" />
+            </form>
+          </div>
+
+          <!-- <form id="appointmentForm" action="#" method="post">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required />
+
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="service">Select Service *</label>
+          <select id="service" name="service" required>
+            <option value="">-- Select --</option>
+            <option>General Check-Up</option>
+            <option>Cleaning</option>
+            <option>Cosmetic Dentistry</option>
+            <option>Dental Implants</option>
+            <option>Orthodontics</option>
+            <option>Pediatric Appointment</option>
+            <option>Emergency Care</option>
+          </select>
+
+          <label for="date">Preferred Date *</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="message">Additional Notes</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit" class="cta-button">Submit Booking</button>
+        </form> -->
+        </section>
+      </main>
+
+      <footer>
+        <p><strong>100SMILES Dental Care</strong></p>
+        <p>Phone: 07 5000 5599 | Fax: 07 4567 9999</p>
+        <p>Address: 33 Fantail Street, Razole, Queensland</p>
+        <p>Email: admin@100smilesdentalcare.com.au</p>
+        <p>&copy; 2025</p>
+      </footer>
+    </div>
+    <script src="form/script.js"></script>
+  </body>
+</html>
